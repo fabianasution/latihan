@@ -17,14 +17,13 @@ font.size = Pt(12)
 
 
 
-
 document.add_heading('Document Title', 0)
 
 p = document.add_paragraph(f'{test} ')
 p.add_run('bold').bold = True
 p.add_run(' and some ')
 p.add_run('italic.').italic = True
-p.style = document.styles['Normal']
+# p.style = document.styles['Normal']
 
 document.add_heading('Heading', level=1)
 document.add_paragraph('Intense quote', style='Intense Quote')
