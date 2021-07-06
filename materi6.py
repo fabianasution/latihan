@@ -12,3 +12,12 @@ angka2list = [i ** 2 for i in angka]
 
 print(angka2list)
 
+# mencari irisan
+
+a = [2,3,4,5,6,7,8]
+b = [5,6,7,8,8,9]
+
+irisan = [i for i in a for j in b if i == j]
+
+print(irisan)
+
