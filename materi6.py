@@ -37,3 +37,15 @@ print(zip_b)
 zip_c = dict(zip(a1, b1))
 
 print(zip_c)
+
+a2 = [1,2,3,4,5]
+b2 = ["a","b","c"]
+
+zip_d = dict(zip(a2, b2))
+
+print(zip_d)
+
+unzipa3, unzipb3 = zip(*zip_a) 
+
+print(unzipb3)
+print(unzipa3)
