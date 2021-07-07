@@ -204,11 +204,13 @@ z1 = np.ones((3,2,4))
 
 print(z1)
 print("=" * 100)
-
+print("ini")
 
 print(int(z1[1,0,0]))
 
-print(z1[2])
+print(z1[2,0]) #ini dan bawah sama saja 
+print(z1[2][0])
+print(z1[:,0,3]) #indexing for all the element in matrix but only the one we prefered 
 
 print("=" * 100)
 
@@ -247,9 +249,36 @@ array_example3 = np.array([[0, 1, 2, 3, 8],
 hasil = array_example2 * array_example3
 print(hasil)
 
+print("=" * 100)
+
 # row reversed of transpose matrix 
 # column reversed of transpose matrix 
 # 
+
+
+# update an array 
+
+array_example2[0,0:5] = 50
+
+print(array_example2)
+
+print("=" * 100)
+
+partf = array_example2[0,0 :5]
+partf[:] = 13
+
+print(partf)
+
+print(array_example2)
+
+print("=" * 100)
+
+# to copy the index
+
+f2 = array_example2.copy()
+f2[0,0:5] = 99
+
+print(f2)
 
 
 
