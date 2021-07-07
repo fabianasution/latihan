@@ -45,7 +45,23 @@ zip_d = dict(zip(a2, b2))
 
 print(zip_d)
 
+# unzipping hanya dapat dilakukan untuk tuple dan list
+
 unzipa3, unzipb3 = zip(*zip_a) 
 
 print(unzipb3)
 print(unzipa3)
+
+# latihan 
+
+buah = ["anggur" , "apel" , "melon" , "nangka", "alpukat", "jeruk", "kiwi", "mangga", "durian"]
+isi = ["coklat", "susu", "keju", "krim", "kopi", "nangka", "durian"]
+
+print(len(buah))
+
+gabung = [ (i,j) for i in buah for j in isi]
+
+print(gabung)
+
+print(len(gabung))
+
