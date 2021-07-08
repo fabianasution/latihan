@@ -280,6 +280,154 @@ f2[0,0:5] = 99
 
 print(f2)
 
+# print which array we want in a matrix
+pot = array_example2[0][[3,2,1]]
+
+print(pot)
+print("=" * 100)
+
+# conditional slicing
+
+print(array_example2 > 10)
+
+condi = array_example2 > 10
+
+print(array_example2[condi])
+
+# perkalian dot matrix / DOT product
+
+a10 = np.array( [
+     [2,4],
+     [5,7]   
+] )
+
+b10 = np.array([
+     [4,3],
+     [3,2]   
+])
+
+dp = np.dot(a10,b10)
+
+print(dp)
+
+
+
+dp1 = np.dot(b10,a10)
+print(dp1)
+
+print("=" * 100)
+hasil = a10 * b10
+
+print(hasil)
+
+print("=" * 100)
+
+b11 = np.array([
+     [5,2,3],
+     [1,4,6]   
+])
+
+
+opsi1 = np.flip(b11,0) #Membalik ROW
+opsi2 = np.flip(b11,1) #Membalik Column
+
+print(opsi1)
+print(opsi2)
+
+print("=" * 100)
+
+b11transpose = np.transpose(b11) #transpose matrix
+
+print(b11transpose)
+print("=" * 100)
+
+# flattening matrix 
+
+flat = np.ravel(a10)
+
+print(flat)
+print("=" * 100)
+
+# reshaping 
+
+print(b11.reshape(3,2))
+
+print("=" * 100)
+
+
+# inverse matrix
+
+b100 = np.linalg.inv(b10) #inverse matrix
+
+print(b100)
+
+print("=" * 100)
+
+identity1 = np.dot(b10,b100) # A . A-1 = identity
+
+print(identity1)
+
+print("=" * 100)
+
+# stacking 
+stack = np.hstack((a10, b10)) #horizontal
+print(stack)
+
+stack = np.hstack((a10, b10)) #vertical
+print(stack)
+
+
+print("=" * 100)
+
+# basic statistic operation
+from scipy import stats
+
+list_a = [ 1,2,3,4,5,6,12,34,2,34,56,7,7,96,32,1,2,3,45,6,7,7,88,8]
+
+Blist = np.array(list_a)
+
+Bmean = np.mean(Blist) #MEAN
+
+Bmedia = np.median(Blist) 
+
+Bmode = stats.mode(Blist)
+
+Bq1 = np.percentile(Blist, 25) # Q1
+Bq2 = np.percentile(Blist, 75) # Q3
+
+Bmax = np.max(Blist)
+Bmin = np.min(Blist)
+
+Bindexmin = np.argmin(Blist) #INDEX
+Bindexmax = np.argmax(Blist)
+
+Bstd = np.std(Blist) # Standart deviation from the population
+
+Bsqrt = np.sqrt(Blist)
+
+Bsort = np.sort(Blist)
+
+
+print(Bmean)
+print(Bmedia)
+# print(Bmode)
+
+print(Bq1)
+print(Bq2)
+print(Bmax)
+print(Bsort)
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
