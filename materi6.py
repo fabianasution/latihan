@@ -64,4 +64,3 @@ gabung = [ (i,j) for i in buah for j in isi]
 print(gabung)
 
 print(len(gabung))
-
